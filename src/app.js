@@ -6,17 +6,16 @@ import Content from './components/Content'
 import Footer from './components/Footer'
 
 
-class App extends React.Component{
-    
+class App extends React.Component {
     render() {
-        return(
+        return (
             <div>
-                <Header/>
-                <Content/>
-                <Footer/>
-            </div>    
+                <Header />
+                <Content />
+                <Footer />
+            </div>
         )
     }
 }
 
-ReactDOM.render(<App/> , document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
