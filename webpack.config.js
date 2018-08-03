@@ -47,8 +47,8 @@ module.exports = {
                   options: {
                     limit: 50000,
                     mimetype: "application/font-woff",
-                    name: "./srс/fonts/[name].[ext]", // Output below ./fonts
-                    publicPath: "../", // Take the directory into account
+                    name: path.join(__dirname, "fonts/[name].[ext]"), // Output below ./fonts
+                    // Take the directory into account
                   },
                 },
             },
