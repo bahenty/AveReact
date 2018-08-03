@@ -10,6 +10,7 @@ class Header extends React.Component {
             <div id='my-header'>
                 <p>Header</p>
                 <img src="../images/innerTopPanelBg.png" alt=""/>
+                <h2>asdasd</h2>
             </div>
         )
     }
