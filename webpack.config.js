@@ -36,7 +36,7 @@ module.exports = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: "./src/images/[name].[ext]"
+                        name: "src/images/[name].[ext]"
                     }
                 }
             },
@@ -47,7 +47,8 @@ module.exports = {
                   options: {
                     limit: 50000,
                     mimetype: "application/font-woff",
-                    name: path.join(__dirname, "fonts/[name].[ext]"), // Output below ./fonts
+                    name: "./src/fonts/[name]/[name].[ext]", // Output below ./fonts
+                    outputPath: './public/fonts'
                     // Take the directory into account
                   },
                 },
@@ -57,7 +58,8 @@ module.exports = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: "./src/fonts/[name]/[name].[ext]"
+                        name: "./src/fonts/[name]/[name].[ext]",
+                        outputPath: './public/fonts'
                     }
                 }
             }

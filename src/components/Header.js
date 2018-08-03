@@ -8,6 +8,7 @@ class Header extends React.Component {
         return (
             <div id='my-header'>
                 <p>Header</p>
+                <img src={require('../images/innerTopPanelBg.png')} alt=""/>
                 <h2>asdasd</h2>
             </div>
         )
