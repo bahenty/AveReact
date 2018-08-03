@@ -18,7 +18,7 @@ module.exports = {
             },
             {
                 test: /\.s(c|a)ss$/,
-                use: 
+                use:
                     [
                         {
                             loader: "style-loader" // creates style nodes from JS strings
@@ -43,14 +43,21 @@ module.exports = {
             {
                 test: /\.woff2?(\?v=\d+\.\d+\.\d+)?$/,
                 use: {
-                  loader: "url-loader",
-                  options: {
-                    limit: 50000,
-                    mimetype: "application/font-woff",
-                    name: "./src/fonts/[name]/[name].[ext]", // Output below ./fonts
-                    outputPath: './public/fonts'
-                    // Take the directory into account
-                  },
+                    loader: "url-loader",
+                    options: {
+                        limit: 50000,
+                        mimetype: "application/font-woff",
+                        name: "./src/fonts/[name]/[name].[ext]", // Output below ./fonts
+                        outputPath: './public/fonts'
+                        // Take the directory into account
+                    },
+                    loader: "url-loader",
+                    options: {
+                        limit: 50000,
+                        mimetype: "application/font-woff",
+                        name: "./srс/fonts/[name].[ext]", // Output below ./fonts
+                        publicPath: "../", // Take the directory into account
+                    },
                 },
             },
             {
@@ -67,7 +74,8 @@ module.exports = {
     },
     devtool: "cheap-module-eval-source-map",
     devServer: {
-        contentBase: path.join(__dirname, 'public')
+        contentBase: path.join(__dirname, 'public'),
+        historyApiFallback: true
     }
 
 };
