@@ -1,16 +1,18 @@
 import React from 'react'
-
-import '../styles/main.sass'
+import { NavLink } from 'react-router-dom'
 
 
 class Header extends React.Component {
     render() {
         return (
-            <div id='my-header'>
-                <p>Header</p>
-                <img src={require('../images/innerTopPanelBg.png')} alt=""/>
-                <h2>asdasd</h2>
-            </div>
+            <header id="header">
+                <NavLink to="/" activeClassName="selected" exact={true}>Home</NavLink>
+                <NavLink to="/mens" activeClassName="selected">Mens</NavLink>
+                <NavLink to="/womens" activeClassName="selected">Womens</NavLink>
+                <NavLink to="/brand" activeClassName="selected">The brand</NavLink>
+                <NavLink to="/stores" activeClassName="selected">Local stores</NavLink>
+                <NavLink to="/look-book" activeClassName="selected">Look book</NavLink>
+            </header>
         )
     }
 }

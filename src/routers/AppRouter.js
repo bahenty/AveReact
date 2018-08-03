@@ -1,32 +1,32 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Content from '../components/Content'
+import NotFoundPage from '../components/pages/NotFoundPage'
+import Mens from '../components/pages/Mens'
+import Womens from '../components/pages/Womens'
+import Brand from '../components/pages/Brand'
+import Stores from '../components/pages/Stores'
+import Lookbook from '../components/pages/Lookbook'
 
-const dashboard = () => (
-  <div>
-    This is dashboard component
-    </div>
-);
-
-const create = () => (
-  <div>
-    This is create component
-    </div>
-);
-
-const NotFoundPage = () => (
-  <div>
-    404 - Page not found! <Link to="/">Go home</Link>
-  </div>
-);
 
 const AppRouter = () => (
   <BrowserRouter>
-    <Switch>
-      <Route path="/" component={dashboard} exact={true} />
-      <Route path="/create" component={create} />
-      <Route component={NotFoundPage} />
-    </Switch>
+    <div>
+      <Header />
+      <Switch>
+        <Route path="/" component={Content} exact={true} />
+        <Route path="/mens" component={Mens} />
+        <Route path="/womens" component={Womens} />
+        <Route path="/brand" component={Brand} />
+        <Route path="/stores" component={Stores} />
+        <Route path="/look-book" component={Lookbook} />
+        <Route component={NotFoundPage} />
+      </Switch>
+      <Footer />
+    </div>
   </BrowserRouter>
 );
 
-export default AppRouter;
+export default AppRouter
