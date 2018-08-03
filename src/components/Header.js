@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import '../styles/components/_header.sass'
-import innerTopPanelBg from '../images'
+
 
 class Header extends React.Component {
     render(){
