@@ -1,0 +1,20 @@
+.menu
+    list-style-type: none
+    position: relative
+
+    &__link
+        letter-spacing: $letter-spacing
+        text-decoration: none
+        
+
+    &__item
+        margin-right: $margin-xxl+$margin-s
+
+    &--inline
+        display: flex
+        text-transform: uppercase
+
+    &--block
+        display: block
+        .menu__item
+            margin-bottom: $margin-s+0.6
