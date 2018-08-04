@@ -7,6 +7,7 @@ import NotFoundPage from '../components/pages/NotFoundPage'
 import Mens from '../components/pages/Mens'
 import Womens from '../components/pages/Womens'
 import Brand from '../components/pages/Brand'
+import BrandItemPage from '../components/pages/BrandItemPage';
 import Stores from '../components/pages/Stores'
 import Lookbook from '../components/pages/Lookbook'
 
@@ -19,7 +20,8 @@ const AppRouter = () => (
         <Route path="/" component={Content} exact={true} />
         <Route path="/mens" component={Mens} />
         <Route path="/womens" component={Womens} />
-        <Route path="/brand" component={Brand} />
+        <Route path="/brand" component={Brand} exact={true} />
+        <Route path="/brand/:id" component={BrandItemPage} />
         <Route path="/stores" component={Stores} />
         <Route path="/look-book" component={Lookbook} />
         <Route component={NotFoundPage} />

@@ -1,14 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-class Brand extends React.Component {
-  render() {
-    return (
-      <div id='brand'>
-        <h1>The brand</h1>
-        <h2>Subtitle</h2>
-      </div>
-    )
-  }
+const Brand = () => {
+  return (
+    <div>
+      <p>The brand</p>
+      <Link to="/brand/1">Jeans</Link>
+      <Link to="/brand/2">Boot</Link>
+    </div>
+  )
 }
 
 export default Brand
