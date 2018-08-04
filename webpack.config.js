@@ -14,7 +14,7 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.s(c|a)ss$/,
+                test: /\.(s(c|a)ss$|css)$/,
                 use:
                     [
                         {
@@ -33,7 +33,7 @@ module.exports = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: "src/images/[name].[ext]"
+                        name: '[path][name]-[hash:8].[ext]'
                     }
                 }
             },
@@ -47,14 +47,7 @@ module.exports = {
                         name: "./src/fonts/[name]/[name].[ext]", // Output below ./fonts
                         outputPath: './public/fonts'
                         // Take the directory into account
-                    },
-                    loader: "url-loader",
-                    options: {
-                        limit: 50000,
-                        mimetype: "application/font-woff",
-                        name: "./srс/fonts/[name].[ext]", // Output below ./fonts
-                        publicPath: "../", // Take the directory into account
-                    },
+                    }
                 },
             },
             {
