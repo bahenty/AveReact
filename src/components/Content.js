@@ -6,7 +6,9 @@ class Content extends React.Component {
   render() {
     return (
       <div id='my-content'>
-        <p>content</p>
+        <div className="container">
+          <p>content</p>
+        </div>
       </div>
     )
   }
