@@ -1,8 +1,22 @@
 .btn
-  padding: 20px 30px
-  border: 2px solid #737373
+  padding: $padding-m $padding-l
+  border: .1rem solid $color-grey--1
   outline: 0
   cursor: pointer
+  color: $color-grey--2
   text-transform: uppercase
-  letter-spacing: 3px
-  font-size: $font-size
+  letter-spacing: .3rem
+  font-size: $font-size--basic
+  &:hover
+    background-color: $color-grey--3
+    color: $color-white
+    border: .1rem solid transparent
+  &--accent
+    &:hover
+      background-color: $color-accent
+      color: $color-white
+      border: .1rem solid transparent
+  &--small
+    font-size: $font-size--basic
+  &--big
+    font-size: $font-size--big

@@ -7,7 +7,6 @@ class Content extends React.Component {
     return (
       <div id='my-content'>
         <p>content</p>
-        <button className="btn">Shop men's collection</button>
       </div>
     )
   }
